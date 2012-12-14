@@ -1,0 +1,38 @@
+/*= Front page
+-----------------------------------------*/
+.home #frontpage-content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 90%;
+	height: 90%;
+	padding: 5%;
+	z-index: 9999;
+	overflow: auto;
+	
+	background: #000000;
+	background: rgba(0, 0, 0, .4);
+}
+
+.home #frontpage-content header {
+	display: none;
+}
+
+.home #frontpage-sidebar {
+	float: none;
+	width: 100%;
+}
+
+.home #frontpage-content article {
+	padding: 10px;
+	
+	background: #ffffff;
+	
+	border-bottom: none;
+}
+
+.home #frontpage-content article a {
+	display: inline-block !important;
+	
+	font-style: normal;
+}

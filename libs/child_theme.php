@@ -28,8 +28,10 @@ class ChildTheme extends RockharborThemeBase {
  */
 	function setupAssets() {
 		$base = $this->info('url');
+		wp_register_script('custom', "$base/js/custom.js");
 		wp_register_style('custom', "$base/css/custom.css");
 		
+		wp_enqueue_script('custom');
 		wp_enqueue_style('custom');
 		
 		parent::setupAssets();
