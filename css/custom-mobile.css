@@ -12,3 +12,10 @@
 	display: block;
 	width: 100%;
 }
+
+/*= Footer
+-----------------------------------------*/
+#footer > div {
+	display: block;
+	width: 100%;
+}
