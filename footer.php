@@ -1,17 +1,38 @@
-<?php 
-global $theme; 
+<?php
+global $theme;
 ?>
 	</div>
 </div>
 <footer role="contentinfo">
 	<div id="footer">
-		<h3>Our Campuses</h3>
-		<ul class="campus-list">
+		<div class="first">
 			<?php
-			$theme->set('global', false);
-			echo $theme->render('campus_chooser');
+			$name = $theme->getMenuName('footer');
+			echo $theme->Html->tag('h3', $name);
+			wp_nav_menu(array('theme_location' => 'footer', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
 			?>
-		</ul>
+		</div>
+		<div class="second">
+			<?php
+			$name = $theme->getMenuName('footer2');
+			echo $theme->Html->tag('h3', $name);
+			wp_nav_menu(array('theme_location' => 'footer1', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			?>
+		</div>
+		<div class="third">
+			<?php
+			$name = $theme->getMenuName('footer3');
+			echo $theme->Html->tag('h3', $name);
+			wp_nav_menu(array('theme_location' => 'footer2', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			?>
+		</div>
+		<div class="last">
+			<?php
+			$name = $theme->getMenuName('footer4');
+			echo $theme->Html->tag('h3', $name);
+			wp_nav_menu(array('theme_location' => 'footer3', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			?>
+		</div>
 	</div>
 </footer>
 <?php wp_footer(); ?>

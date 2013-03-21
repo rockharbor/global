@@ -24,6 +24,19 @@ class ChildTheme extends RockharborThemeBase {
 	);
 
 /**
+ * Set up some additional menu areas while overwriting the original 'footer' one
+ * with a new name so it's consistent for this theme
+ */
+	public function after() {
+		register_nav_menus(array(
+			'footer' => __('Footer Column 1', 'rockharbor'),
+			'footer2' => __('Footer Column 2', 'rockharbor'),
+			'footer3' => __('Footer Column 2', 'rockharbor'),
+			'footer4' => __('Footer Column 3', 'rockharbor'),
+		));
+	}
+
+/**
  * Overrides `setupAssets()` to include some custom assets
  */
 	function setupAssets() {
