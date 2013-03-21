@@ -27,9 +27,13 @@ $(document).ready(function() {
 	if (data === 'true') {
 		RH.hideSplash(false);
 	}
-	
+
 	// make campus-chooser li's clickable
 	$('.campus-chooser li').click(function() {
 		window.location = $(this).find('a.campus-link').prop('href');
 	})
+	$('#frontpage-content footer').click(function() {
+		RH.hideSplash(true);
+		return false;
+	});
 });
