@@ -120,20 +120,3 @@
 	color: #6d6e72;
 	font-size: 2em /*= 20px */
 }
-
-@media screen and (max-width: 480px) {
-
-	.campus-chooser li {
-		display: block;
-	}
-
-	.campus-chooser .map {
-		display: none;
-	}
-
-	.campus-chooser .campus-info {
-		display: block;
-		width: 100%;
-	}
-
-}

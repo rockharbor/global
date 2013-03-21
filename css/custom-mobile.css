@@ -1,0 +1,14 @@
+/*= Campus chooser
+-----------------------------------------*/
+.campus-chooser li {
+	display: block;
+}
+
+.campus-chooser .map {
+	display: none;
+}
+
+.campus-chooser .campus-info {
+	display: block;
+	width: 100%;
+}
