@@ -1,15 +1,15 @@
 <?php
 /**
  * RH Global theme
- * 
+ *
  * @package rockharbor
  * @subpackage global
  */
 class ChildTheme extends RockharborThemeBase {
-		
+
 /**
  * List of options for this theme
- * 
+ *
  * @var array
  */
 	protected $themeOptions = array(
@@ -43,10 +43,10 @@ class ChildTheme extends RockharborThemeBase {
 		$base = $this->info('url');
 		wp_register_script('custom', "$base/js/custom.js");
 		wp_register_style('custom', "$base/css/custom.css");
-		
+
 		wp_enqueue_script('custom');
 		wp_enqueue_style('custom');
-		
+
 		parent::setupAssets();
 	}
 }
