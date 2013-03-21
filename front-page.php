@@ -1,6 +1,6 @@
-<?php 
+<?php
 global $post;
-get_header(); 
+get_header();
 ?>
 		<section id="frontpage-sidebar" role="complementary">
 			<?php
@@ -17,7 +17,10 @@ get_header();
 				<?php the_content(); ?>
 				<?php echo $theme->render('campus_chooser'); ?>
 			</article>
+			<footer>
+				<a href="javascript:RH.hideSplash(true);">Continue to ROCKHARBOR.org</a>
+			</footer>
 		</section>
 
-<?php 
+<?php
 get_footer();
