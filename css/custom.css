@@ -9,13 +9,9 @@
 	padding: 5%;
 	z-index: 9999;
 	overflow: auto;
-	
+
 	background: #000000;
 	background: rgba(0, 0, 0, .4);
-}
-
-.home #frontpage-content header {
-	display: none;
 }
 
 .home #frontpage-sidebar {
@@ -23,16 +19,121 @@
 	width: 100%;
 }
 
-.home #frontpage-content article {
+.home #frontpage-content header,
+.home #frontpage-content article,
+.home #frontpage-content footer
+{
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
 	padding: 10px;
-	
-	background: #ffffff;
-	
+
+	background: #f2f2f2;
+
 	border-bottom: none;
 }
 
-.home #frontpage-content article a {
-	display: inline-block !important;
-	
-	font-style: normal;
+.home #frontpage-content header {
+	padding-bottom: 0;
+}
+
+.home #frontpage-content header h1 {
+	padding: 0;
+	padding-left: 35px;
+
+	background: url('../img/rhlogo-blue.png') no-repeat 0 2px;
+	box-shadow: none;
+
+	color: #007597;
+}
+
+.home #frontpage-content article p {
+	padding-left: 35px;
+
+	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	color: #6d6e72;
+	font-size: 2em; /*= 20px */
+}
+
+.home #frontpage-content footer {
+	cursor: pointer;
+
+	background: #3a9ecf;
+
+	text-align: center;
+}
+
+.home #frontpage-content footer a {
+	padding-right: 35px;
+
+	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-size: 2em; /*= 20px */
+	text-decoration: none;
+
+	background: url('../img/rhlogo-white.png') no-repeat 100% 50%;
+}
+
+.home #frontpage-content footer:hover {
+	background: #d2d3d5;
+}
+
+/*= Campus chooser
+-----------------------------------------*/
+.campus-chooser li {
+	position: relative;
+	display: table;
+	padding: 10px;
+
+	cursor: pointer;
+
+	background: #d2d3d5;
+}
+
+.campus-chooser li:hover {
+	background: #f2f2f2;
+}
+
+.campus-chooser a {
+	padding: 0;
+	color: #404042;
+	font-size: 4em !important /*= 30px */;
+}
+
+.campus-chooser .map {
+	display: table-cell;
+	vertical-align: top;
+	padding: 5px;
+}
+
+.campus-chooser .campus-info {
+	display: table-cell;
+	vertical-align: top;
+	width: 85%;
+	padding-left: 10px;
+}
+
+.campus-chooser .service-times span {
+	display: block;
+
+	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	color: #6d6e72;
+	font-size: 2em /*= 20px */
+}
+
+@media screen and (max-width: 480px) {
+
+	.campus-chooser li {
+		display: block;
+	}
+
+	.campus-chooser .map {
+		display: none;
+	}
+
+	.campus-chooser .campus-info {
+		display: block;
+		width: 100%;
+	}
+
 }
