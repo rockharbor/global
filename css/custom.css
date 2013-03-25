@@ -82,7 +82,6 @@
 -----------------------------------------*/
 .campus-chooser li {
 	position: relative;
-	display: table;
 	padding: 10px;
 
 	cursor: pointer;
@@ -100,17 +99,24 @@
 	font-size: 4em !important /*= 30px */;
 }
 
+.campus-chooser li:after {
+	display: block;
+	height: 0;
+	content: ' ';
+	clear: both;
+}
+
 .campus-chooser .map {
-	display: table-cell;
+	float: left;
 	vertical-align: top;
+	width: 15%;
 	padding: 5px;
+	margin-right: 10px;
 }
 
 .campus-chooser .campus-info {
-	display: table-cell;
 	vertical-align: top;
 	width: 85%;
-	padding-left: 10px;
 }
 
 .campus-chooser .service-times span {
