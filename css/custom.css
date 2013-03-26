@@ -41,7 +41,7 @@
 	padding: 0;
 	padding-left: 35px;
 
-	background: url('../img/rhlogo-blue.png') no-repeat 0 2px;
+	background: url('../img/logo.png') no-repeat 0 2px;
 	box-shadow: none;
 
 	color: #007597;
@@ -71,7 +71,7 @@
 	font-size: 2em; /*= 20px */
 	text-decoration: none;
 
-	background: url('../img/rhlogo-white.png') no-repeat 100% 50%;
+	background: url('../img/logo-white.png') no-repeat 100% 50%;
 }
 
 .home #frontpage-content footer:hover {
