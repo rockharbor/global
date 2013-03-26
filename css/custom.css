@@ -1,3 +1,7 @@
+body {
+	background: url('images/bkg.png') repeat #e8e8e8;
+}
+
 /*= Front page
 -----------------------------------------*/
 .home #frontpage-content {
