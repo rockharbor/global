@@ -40,6 +40,8 @@ class ChildTheme extends RockharborThemeBase {
  * Overrides `setupAssets()` to include some custom assets
  */
 	function setupAssets() {
+		parent::setupAssets();
+
 		$base = $this->info('url');
 		wp_register_script('custom', "$base/js/custom.js");
 		wp_register_style('custom', "$base/css/custom.css");
@@ -50,7 +52,5 @@ class ChildTheme extends RockharborThemeBase {
 		wp_enqueue_style('custom');
 		wp_enqueue_style('custom-tablet');
 		wp_enqueue_style('custom-mobile');
-
-		parent::setupAssets();
 	}
 }
