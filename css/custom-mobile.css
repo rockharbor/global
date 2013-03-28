@@ -1,3 +1,5 @@
+@media screen and (max-width: 480px) {
+
 /*= Campus chooser
 -----------------------------------------*/
 .campus-chooser li {
@@ -18,4 +20,6 @@
 #footer > div {
 	display: block;
 	width: 100%;
+}
+
 }
