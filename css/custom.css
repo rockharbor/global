@@ -2,6 +2,18 @@ body {
 	background: url('images/bkg.png') repeat #e8e8e8;
 }
 
+/*= Footer
+-----------------------------------------*/
+#footer div a {
+	color: #747474;
+	text-decoration: none;
+	font-size: 1.3em;
+}
+
+#footer div a:hover {
+	text-decoration: underline;
+}
+
 /*= Front page
 -----------------------------------------*/
 .home #frontpage-content {
