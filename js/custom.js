@@ -10,7 +10,7 @@ RH.hideSplash = function(remember) {
 	}
 }
 
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	// check cookie to see if we should hide the splash
 	var cookies = document.cookie.split(';');
 	var data;
@@ -29,10 +29,10 @@ $(document).ready(function() {
 	}
 
 	// make campus-chooser li's clickable
-	$('.campus-chooser li').click(function() {
-		window.location = $(this).find('a.campus-link').prop('href');
+	jQuery('.campus-chooser li').click(function() {
+		window.location = jQuery(this).find('a.campus-link').prop('href');
 	})
-	$('#frontpage-content footer').click(function() {
+	jQuery('#frontpage-content footer').click(function() {
 		RH.hideSplash(true);
 		return false;
 	});

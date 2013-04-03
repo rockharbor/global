@@ -40,17 +40,17 @@ class ChildTheme extends RockharborThemeBase {
  * Overrides `setupAssets()` to include some custom assets
  */
 	function setupAssets() {
+		parent::setupAssets();
+
 		$base = $this->info('url');
 		wp_register_script('custom', "$base/js/custom.js");
 		wp_register_style('custom', "$base/css/custom.css");
-		wp_register_style('custom-tablet', "$base/css/custom-tablet.css", array(), false, 'screen and (max-width: 768px)');
-		wp_register_style('custom-mobile', "$base/css/custom-mobile.css", array(), false, 'screen and (max-width: 480px)');
+		wp_register_style('custom-tablet', "$base/css/custom-tablet.css");
+		wp_register_style('custom-mobile', "$base/css/custom-mobile.css");
 
 		wp_enqueue_script('custom');
 		wp_enqueue_style('custom');
 		wp_enqueue_style('custom-tablet');
 		wp_enqueue_style('custom-mobile');
-
-		parent::setupAssets();
 	}
 }
