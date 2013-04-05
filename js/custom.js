@@ -1,13 +1,13 @@
 RH = typeof RH == 'undefined' ? {} : RH;
 
-RH.hideSplash = function(remember) {
+RH.hideSplash = function(campus) {
 	RH.showVideos();
-	if (typeof remember === 'undefined') {
-		remember = false;
+	if (typeof campus === 'undefined') {
+		campus = false;
 	}
 	jQuery('#frontpage-content').hide();
-	if (remember) {
-		document.cookie = 'hidesplash=true; path=/';
+	if (campus) {
+		document.cookie = 'hidesplash='+campus+'; path=/';
 	}
 }
 
@@ -25,18 +25,21 @@ jQuery(document).ready(function() {
 			break;
 		}
 	}
-	if (data === 'true') {
-		RH.hideSplash(false);
+	if (typeof data !== 'undefined' && data.length && data !== 'true') {
+		RH.hideSplash(data);
 	} else {
 		RH.hideVideos();
 	}
 
 	// make campus-chooser li's clickable
 	jQuery('.campus-chooser li').click(function() {
-		window.location = jQuery(this).find('a.campus-link').prop('href');
+		var campusUrl = jQuery(this).find('a.campus-link').prop('href');
+		var domain = campusUrl.replace('http://', '').split('.')[0];
+		RH.hideSplash(domain);
+		window.location = campusUrl;
 	})
 	jQuery('#frontpage-content footer').click(function() {
-		RH.hideSplash(true);
+		RH.hideSplash('www');
 		return false;
 	});
 });
