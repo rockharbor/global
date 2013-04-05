@@ -16,21 +16,21 @@ global $theme;
 			<?php
 			$name = $theme->getMenuName('footer2');
 			echo $theme->Html->tag('h3', $name);
-			wp_nav_menu(array('theme_location' => 'footer1', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			wp_nav_menu(array('theme_location' => 'footer2', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
 			?>
 		</div>
 		<div class="third">
 			<?php
 			$name = $theme->getMenuName('footer3');
 			echo $theme->Html->tag('h3', $name);
-			wp_nav_menu(array('theme_location' => 'footer2', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			wp_nav_menu(array('theme_location' => 'footer3', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
 			?>
 		</div>
 		<div class="last">
 			<?php
 			$name = $theme->getMenuName('footer4');
 			echo $theme->Html->tag('h3', $name);
-			wp_nav_menu(array('theme_location' => 'footer3', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
+			wp_nav_menu(array('theme_location' => 'footer4', 'menu_class' => 'menu', 'fallback_cb' => create_function('', 'return;')));
 			?>
 		</div>
 	</div>

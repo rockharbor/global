@@ -31,8 +31,8 @@ class ChildTheme extends RockharborThemeBase {
 		register_nav_menus(array(
 			'footer' => __('Footer Column 1', 'rockharbor'),
 			'footer2' => __('Footer Column 2', 'rockharbor'),
-			'footer3' => __('Footer Column 2', 'rockharbor'),
-			'footer4' => __('Footer Column 3', 'rockharbor'),
+			'footer3' => __('Footer Column 3', 'rockharbor'),
+			'footer4' => __('Footer Column 4', 'rockharbor'),
 		));
 	}
 
