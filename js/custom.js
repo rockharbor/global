@@ -1,6 +1,7 @@
 RH = typeof RH == 'undefined' ? {} : RH;
 
 RH.hideSplash = function(remember) {
+	RH.showVideos();
 	if (typeof remember === 'undefined') {
 		remember = false;
 	}
@@ -26,6 +27,8 @@ jQuery(document).ready(function() {
 	}
 	if (data === 'true') {
 		RH.hideSplash(false);
+	} else {
+		RH.hideVideos();
 	}
 
 	// make campus-chooser li's clickable
