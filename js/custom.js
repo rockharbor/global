@@ -6,6 +6,7 @@ RH.hideSplash = function(campus) {
 		campus = false;
 	}
 	jQuery('#frontpage-content').hide();
+	$('body').css('overflow', 'auto');
 	if (campus) {
 		document.cookie = 'hidesplash='+campus+'; path=/';
 	}
@@ -29,6 +30,7 @@ jQuery(document).ready(function() {
 		RH.hideSplash(data);
 	} else {
 		jQuery('#frontpage-content').fadeIn();
+		$('body').css('overflow', 'hidden');
 		RH.hideVideos();
 	}
 
