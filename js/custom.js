@@ -28,6 +28,7 @@ jQuery(document).ready(function() {
 	if (typeof data !== 'undefined' && data.length && data !== 'true') {
 		RH.hideSplash(data);
 	} else {
+		jQuery('#frontpage-content').fadeIn();
 		RH.hideVideos();
 	}
 
