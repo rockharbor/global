@@ -8,7 +8,7 @@ RH.hideSplash = function(campus) {
 	jQuery('#frontpage-content').hide();
 	$('body').css('overflow', 'auto');
 	if (campus) {
-		document.cookie = 'hidesplash='+campus+'; expires=Thu, 19 January 2038 03:14:07 GMT path=/';
+		document.cookie = 'hidesplash='+campus+'; expires=Thu, 19 January 2038 03:14:07 GMT; path=/';
 	}
 }
 
