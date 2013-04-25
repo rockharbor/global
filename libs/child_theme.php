@@ -28,6 +28,7 @@ class ChildTheme extends RockharborThemeBase {
  * with a new name so it's consistent for this theme
  */
 	public function after() {
+		parent::after();
 		register_nav_menus(array(
 			'footer' => __('Footer Column 1', 'rockharbor'),
 			'footer2' => __('Footer Column 2', 'rockharbor'),
