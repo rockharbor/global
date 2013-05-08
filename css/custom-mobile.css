@@ -29,7 +29,11 @@
 -----------------------------------------*/
 #footer > div {
 	display: block;
-	width: 100%;
+	width: 49%;
+}
+
+#footer > div.third {
+	clear: both;
 }
 
 }
