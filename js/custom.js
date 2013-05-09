@@ -13,6 +13,10 @@ RH.hideSplash = function(campus) {
 }
 
 jQuery(document).ready(function() {
+	if (!jQuery('#frontpage-content').length) {
+		return;
+	}
+
 	// check cookie to see if we should hide the splash
 	var cookies = document.cookie.split(';');
 	var data;
