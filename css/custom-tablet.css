@@ -1,5 +1,11 @@
 @media screen and (max-width: 1025px) {
 
+/*= Main Navigation
+-----------------------------------------*/
+nav.submenu a {
+	margin-left: 10px;
+}
+
 /*= Footer
 -----------------------------------------*/
 #footer > div {
