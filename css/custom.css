@@ -1,5 +1,5 @@
 body {
-	background: url('images/bkg.png') repeat #e8e8e8;
+	/*background: url('images/bkg.png') repeat #e8e8e8;*/
 }
 
 /*= Main Navigation
@@ -11,7 +11,7 @@ body {
 /*= Footer
 -----------------------------------------*/
 #footer div a {
-	color: #747474;
+	color: #fff;
 	text-decoration: none;
 	font-size: 1.3em;
 }
