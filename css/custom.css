@@ -1,7 +1,3 @@
-body {
-	/*background: url('images/bkg.png') repeat #e8e8e8;*/
-}
-
 /*= Main Navigation
 -----------------------------------------*/
 #access ul li a {
@@ -26,15 +22,24 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 90%;
-	height: 90%;
+	width: 100%;
+	height: 100%;
 	padding: 5%;
 	z-index: 9999;
 	overflow: auto;
 	display: none;
 
 	background: #000000;
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, .6);
+}
+#frontpage-content .modal {
+	background-color: white;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+#frontpage-content .header {
+	text-align: center;
 }
 
 .home #frontpage-sidebar {
@@ -73,7 +78,7 @@ body {
 .home #frontpage-content article p {
 	padding-left: 35px;
 
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
 	color: #6d6e72;
 	font-size: 2em; /*= 20px */
 }
@@ -89,7 +94,7 @@ body {
 .home #frontpage-content footer a {
 	padding-right: 35px;
 
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
 	color: #ffffff;
 	font-size: 2em; /*= 20px */
 	text-decoration: none;
@@ -103,23 +108,60 @@ body {
 
 /*= Campus chooser
 -----------------------------------------*/
+#frontpage-content .header {
+    padding: 20px;
+    padding-bottom: 10px;
+    font-style: italic;
+    color: #939393;
+}
+#frontpage-content .header img {
+    max-width: 300px;
+}
 .campus-chooser li {
-	position: relative;
-	padding: 10px;
-
+	position: relative;    
+    margin-bottom: 10px;
 	cursor: pointer;
+    background-size: 100%;
+    background-position: center center;
 
+    color: white;
 	background: #d2d3d5;
 }
 
 .campus-chooser li:hover {
-	background: #f2f2f2;
+	background: #1C9DC2;
 }
 
-.campus-chooser a {
-	padding: 0;
-	color: #404042;
-	font-size: 4em !important /*= 30px */;
+
+.campus-chooser .title, .campus-chooser .service-times {
+    display: inline-block;
+    float: left;
+    padding: 10px 30px;
+    width: 50%;
+    color: white;
+} 
+.campus-chooser .campus-info {
+    padding: 15px 0;
+    overflow: auto;
+}
+.campus-chooser .campus-info:hover {
+    background-color: rgba(28, 157, 194, .5);
+}
+
+.campus-chooser .campus-info .title {
+    border-right: 2px solid white;
+}
+.campus-chooser .title p {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.campus-chooser a {    
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    letter-spacing: 0.03em;
+	font-size: 3em !important /*= 30px */;
+    color: white;
+    padding: 0;
 }
 
 .campus-chooser li:after {
@@ -138,14 +180,51 @@ body {
 }
 
 .campus-chooser .campus-info {
-	vertical-align: top;
-	width: 85%;
+	vertical-align: top;	
 }
 
+.campus-chooser .service-times {
+    
+}
 .campus-chooser .service-times span {
-	display: block;
-
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
-	color: #6d6e72;
+    display: block;
+    margin-bottom: 8px;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
+    letter-spacing: 0.02em;
 	font-size: 2em /*= 20px */
+}
+#frontpage-content .continue {
+    display: block;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: #1C9DC2;
+    color: white;
+
+    width: 100%;
+    padding: 25px 0;
+
+}
+#frontpage-content .continue:hover {
+    background-color: #0D6078;
+}
+
+
+@media screen and (max-width: 569px) {
+    #frontpage-content {
+        padding: 2%;
+    }
+    .campus-chooser .title, .campus-chooser .service-times {
+        display: block;
+        float: none;
+        padding: 0px 30px;
+        width: 100%;
+        color: white;
+    } 
+    .campus-chooser .campus-info .title {
+        border: none;
+    }
 }
