@@ -1,7 +1,7 @@
 /*= Main Navigation
 -----------------------------------------*/
 #access ul li a {
-	padding: 9px 17px 9px 17px;
+	/*padding: 9px 17px 9px 17px;*/
 }
 
 /*= Footer
@@ -118,18 +118,16 @@
     max-width: 300px;
 }
 .campus-chooser li {
-	position: relative;    
+	position: relative;
     margin-bottom: 10px;
 	cursor: pointer;
-    background-size: 100%;
-    background-position: 62% 17%;
-
+    background-size: 120%;
+    background-position: 95% 7%;
     color: white;
-	background: #d2d3d5;
 }
 
 .campus-chooser li:hover {
-	background: #1C9DC2;
+	background-color: #1C9DC2;
 }
 
 
@@ -139,7 +137,7 @@
     padding: 10px 30px;
     width: 50%;
     color: white;
-} 
+}
 .campus-chooser .campus-info {
     padding: 15px 0;
     overflow: auto;
@@ -156,7 +154,7 @@
     margin-top: 10px;
 }
 
-.campus-chooser a {    
+.campus-chooser a {
     font-family: 'TradeGothicLTStdBdCnNo.20';
     letter-spacing: 0.03em;
 	font-size: 3em !important /*= 30px */;
@@ -180,11 +178,11 @@
 }
 
 .campus-chooser .campus-info {
-	vertical-align: top;	
+	vertical-align: top;
 }
 
 .campus-chooser .service-times {
-    
+
 }
 .campus-chooser .service-times span {
     display: block;
@@ -223,7 +221,7 @@
         padding: 0px 30px;
         width: 100%;
         color: white;
-    } 
+    }
     .campus-chooser .campus-info .title {
         border: none;
     }
