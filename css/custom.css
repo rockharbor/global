@@ -110,21 +110,27 @@
 -----------------------------------------*/
 #frontpage-content .header {
     padding: 20px;
-    padding-bottom: 10px;
-    font-style: italic;
-    color: #939393;
 }
 #frontpage-content .header img {
     max-width: 300px;
 }
+
+#frontpage-content .header p {
+	color: #939393;
+	font-family: Arial, sans-serif;
+	font-style: italic;
+	margin: 0;
+	margin-top: 5px;
+}
+
 .campus-chooser li {
 	position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 	cursor: pointer;
-    background-size: 120%;
-    background-position: 95% 7%;
+    background-size: cover;
     color: white;
 }
+.campus-chooser li:last-child { margin-bottom: 0;}
 
 .campus-chooser li:hover {
 	background-color: #1C9DC2;
@@ -134,32 +140,35 @@
 .campus-chooser .title, .campus-chooser .service-times {
     display: inline-block;
     float: left;
-    padding: 10px 30px;
+    padding: 10px 15px 10px 25px;
     width: 50%;
     color: white;
 }
-.campus-chooser .campus-info {
-    padding: 15px 0;
-    overflow: auto;
+.campus-chooser .campus-info .title {
+	border-right: 2px solid white;
+	padding: 20px;
 }
+
+
+.campus-chooser .campus-info {
+    padding: 15px;
+    overflow: auto;
+	min-height: 90px;
+	vertical-align: top;
+}
+
 .campus-chooser .campus-info:hover {
     background-color: rgba(28, 157, 194, .5);
 }
 
-.campus-chooser .campus-info .title {
-    border-right: 2px solid white;
-}
-.campus-chooser .title p {
-    font-style: italic;
-    margin-top: 10px;
-}
 
-.campus-chooser a {
+.campus-chooser .campus-link {
     font-family: 'TradeGothicLTStdBdCnNo.20';
     letter-spacing: 0.03em;
-	font-size: 3em !important /*= 30px */;
+	font-size: 3.6em !important;
     color: white;
     padding: 0;
+	margin-bottom: 5px;
 }
 
 .campus-chooser li:after {
@@ -177,25 +186,21 @@
 	margin-right: 10px;
 }
 
-.campus-chooser .campus-info {
-	vertical-align: top;
-}
-
-.campus-chooser .service-times {
-
-}
 .campus-chooser .service-times span {
-    display: block;
-    margin-bottom: 8px;
+	display: block;
+	margin-bottom: 8px;
 	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
-    letter-spacing: 0.02em;
-	font-size: 2em /*= 20px */
+	letter-spacing: 0.02em;
+	font-size: 2.4em /*= 20px */
 }
+
+
 #frontpage-content .continue {
     display: block;
 
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 1.3em;
+	font-weight: 300;
     text-align: center;
     cursor: pointer;
 
@@ -206,6 +211,10 @@
     padding: 25px 0;
 
 }
+#frontpage-content .continue span {
+    font-weight: 600;
+}
+
 #frontpage-content .continue:hover {
     background-color: #0D6078;
 }
@@ -218,11 +227,12 @@
     .campus-chooser .title, .campus-chooser .service-times {
         display: block;
         float: none;
-        padding: 0px 30px;
+        padding: 0px 20px;
         width: 100%;
         color: white;
     }
     .campus-chooser .campus-info .title {
         border: none;
+		padding: 10px 20px;
     }
 }
