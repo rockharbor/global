@@ -112,7 +112,8 @@
     padding: 20px;
 }
 #frontpage-content .header img {
-    max-width: 300px;
+	width: 300px;
+	max-width: 100%;
 }
 
 #frontpage-content .header p {
@@ -224,15 +225,21 @@
     #frontpage-content {
         padding: 2%;
     }
+	#frontpage-content .header p {
+		font-size: 1.3em;
+	}
     .campus-chooser .title, .campus-chooser .service-times {
         display: block;
         float: none;
-        padding: 0px 20px;
+        padding: 0;
         width: 100%;
         color: white;
     }
+	.campus-chooser .campus-link { font-size: 3em !important; }
+	.campus-chooser .service-times span { font-size: 2em; }
     .campus-chooser .campus-info .title {
         border: none;
-		padding: 10px 20px;
+		padding: 10px 0;
     }
+
 }
