@@ -1,20 +1,16 @@
 /*= Main Navigation
 -----------------------------------------*/
-#access ul li a {
-	/*padding: 9px 17px 9px 17px;*/
-}
+/*#access ul li a {
+	padding: 9px 17px 9px 17px;
+}*/
 
 /*= Footer
 -----------------------------------------*/
-#footer div a {
+/*#footer div a {
 	color: #fff;
 	text-decoration: none;
 	font-size: 1.3em;
-}
-
-#footer div a:hover {
-	text-decoration: underline;
-}
+}*/
 
 /*= Front page
 -----------------------------------------*/
@@ -118,7 +114,7 @@
 
 #frontpage-content .header p {
 	color: #939393;
-	font-family: Arial, sans-serif;
+	font-family: Georgia, serif;
 	font-style: italic;
 	margin: 0;
 	margin-top: 5px;

@@ -27,10 +27,7 @@
 
 /*= Footer
 -----------------------------------------*/
-#footer > div {
-	display: block;
-	width: 49%;
-}
+
 
 #footer > div.third {
 	clear: both;
