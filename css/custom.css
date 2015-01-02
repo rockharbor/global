@@ -1,24 +1,16 @@
-body {
-	background: url('images/bkg.png') repeat #e8e8e8;
-}
-
 /*= Main Navigation
 -----------------------------------------*/
-#access ul li a {
+/*#access ul li a {
 	padding: 9px 17px 9px 17px;
-}
+}*/
 
 /*= Footer
 -----------------------------------------*/
-#footer div a {
-	color: #747474;
+/*#footer div a {
+	color: #fff;
 	text-decoration: none;
 	font-size: 1.3em;
-}
-
-#footer div a:hover {
-	text-decoration: underline;
-}
+}*/
 
 /*= Front page
 -----------------------------------------*/
@@ -26,15 +18,24 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 90%;
-	height: 90%;
+	width: 100%;
+	height: 100%;
 	padding: 5%;
 	z-index: 9999;
 	overflow: auto;
 	display: none;
 
 	background: #000000;
-	background: rgba(0, 0, 0, .4);
+	background: rgba(0, 0, 0, .6);
+}
+#frontpage-content .modal {
+	background-color: white;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+#frontpage-content .header {
+	text-align: center;
 }
 
 .home #frontpage-sidebar {
@@ -58,6 +59,7 @@ body {
 
 .home #frontpage-content header {
 	padding-bottom: 0;
+	font-family: Georgia, serif;
 }
 
 .home #frontpage-content header h1 {
@@ -73,7 +75,7 @@ body {
 .home #frontpage-content article p {
 	padding-left: 35px;
 
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
 	color: #6d6e72;
 	font-size: 2em; /*= 20px */
 }
@@ -89,7 +91,7 @@ body {
 .home #frontpage-content footer a {
 	padding-right: 35px;
 
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
 	color: #ffffff;
 	font-size: 2em; /*= 20px */
 	text-decoration: none;
@@ -103,23 +105,68 @@ body {
 
 /*= Campus chooser
 -----------------------------------------*/
+#frontpage-content .header {
+    padding: 20px;
+}
+#frontpage-content .header img {
+	width: 300px;
+	max-width: 100%;
+}
+
+#frontpage-content .header p {
+	color: #939393;
+	font-family: Georgia, serif;
+	font-style: italic;
+	margin: 0;
+	margin-top: 5px;
+}
+
 .campus-chooser li {
 	position: relative;
-	padding: 10px;
-
+    margin-bottom: 8px;
 	cursor: pointer;
-
-	background: #d2d3d5;
+    background-size: cover;
+    color: white;
 }
+.campus-chooser li:last-child { margin-bottom: 0;}
 
 .campus-chooser li:hover {
-	background: #f2f2f2;
+	background-color: #1C9DC2;
 }
 
-.campus-chooser a {
-	padding: 0;
-	color: #404042;
-	font-size: 4em !important /*= 30px */;
+
+.campus-chooser .title, .campus-chooser .service-times {
+    display: inline-block;
+    float: left;
+    padding: 10px 15px 10px 25px;
+    width: 50%;
+    color: white;
+}
+.campus-chooser .campus-info .title {
+	border-right: 2px solid white;
+	padding: 20px;
+}
+
+
+.campus-chooser .campus-info {
+    padding: 15px;
+    overflow: auto;
+	min-height: 90px;
+	vertical-align: top;
+}
+
+.campus-chooser .campus-info:hover {
+    background-color: rgba(28, 157, 194, .5);
+}
+
+
+.campus-chooser .campus-link {
+    font-family: 'TradeGothicLTStdBdCnNo.20';
+    letter-spacing: 0.03em;
+	font-size: 3.6em !important;
+    color: white;
+    padding: 0;
+	margin-bottom: 5px;
 }
 
 .campus-chooser li:after {
@@ -137,15 +184,59 @@ body {
 	margin-right: 10px;
 }
 
-.campus-chooser .campus-info {
-	vertical-align: top;
-	width: 85%;
-}
-
 .campus-chooser .service-times span {
 	display: block;
+	margin-bottom: 8px;
+	font-family: 'TradeGothicLTStdBdCnNo.20', Arial, sans-serif;
+	letter-spacing: 0.02em;
+	font-size: 2.4em /*= 20px */
+}
 
-	font-family: 'TradeGothicLTStdBdCnNo.20', Lucida, Helvetica, Arial, sans-serif;
-	color: #6d6e72;
-	font-size: 2em /*= 20px */
+
+#frontpage-content .continue {
+    display: block;
+
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.3em;
+	font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+
+    background-color: #1C9DC2;
+    color: white;
+
+    width: 100%;
+    padding: 25px 0;
+
+}
+#frontpage-content .continue span {
+    font-weight: 600;
+}
+
+#frontpage-content .continue:hover {
+    background-color: #0D6078;
+}
+
+
+@media screen and (max-width: 569px) {
+    #frontpage-content {
+        padding: 2%;
+    }
+	#frontpage-content .header p {
+		font-size: 1.3em;
+	}
+    .campus-chooser .title, .campus-chooser .service-times {
+        display: block;
+        float: none;
+        padding: 0;
+        width: 100%;
+        color: white;
+    }
+	.campus-chooser .campus-link { font-size: 3em !important; }
+	.campus-chooser .service-times span { font-size: 2em; }
+    .campus-chooser .campus-info .title {
+        border: none;
+		padding: 10px 0;
+    }
+
 }
