@@ -6,7 +6,7 @@ RH.hideSplash = function(campus) {
 		campus = false;
 	}
 	jQuery('#frontpage-content').hide();
-	$('body').css('overflow', 'auto');
+	jQuery('body').css('overflow', 'auto');
 	if (campus) {
 		document.cookie = 'hidesplash='+campus+'; expires=Thu, 19 January 2038 03:14:07 GMT; path=/';
 	}
@@ -34,7 +34,7 @@ jQuery(document).ready(function() {
 		RH.hideSplash(data);
 	} else {
 		jQuery('#frontpage-content').fadeIn();
-		$('body').css('overflow', 'hidden');
+		jQuery('body').css('overflow', 'hidden');
 		RH.hideVideos();
 	}
 
