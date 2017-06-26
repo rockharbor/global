@@ -1,23 +1,5 @@
-RH = typeof RH == 'undefined' ? {} : RH;
-
-RH.hideSplash = function(campus) {
-	RH.showVideos();
-	if (typeof campus === 'undefined') {
-		campus = false;
-	}
-	jQuery('#frontpage-content').hide();
-	jQuery('body').css('overflow', 'auto');
-	if (campus) {
-		document.cookie = 'hidesplash='+campus+'; expires=Thu, 19 January 2038 03:14:07 GMT; path=/';
-	}
-}
-
 jQuery(document).ready(function() {
-	if (!jQuery('#frontpage-content').length) {
-		return;
-	}
-
-	// check cookie to see if we should hide the splash
+	// unset the splash page cookie if it exists
 	var cookies = document.cookie.split(';');
 	var data;
 	for (var i=0; i < cookies.length; i++) {
@@ -26,27 +8,7 @@ jQuery(document).ready(function() {
 			c = c.substring(1, c.length);
 		}
 		if (c.indexOf('hidesplash=') == 0) {
-			data = c.substring('hidesplash='.length, c.length);
-			break;
+			document.cookie = 'hidesplash=null; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
 		}
 	}
-	if (typeof data !== 'undefined' && data.length && data !== 'true') {
-		RH.hideSplash(data);
-	} else {
-		jQuery('#frontpage-content').fadeIn();
-		jQuery('body').css('overflow', 'hidden');
-		RH.hideVideos();
-	}
-
-	// make campus-chooser li's clickable
-	jQuery('.campus-chooser li').click(function() {
-		var campusUrl = jQuery(this).find('a.campus-link').prop('href');
-		var domain = campusUrl.replace('http://', '').split('.')[0];
-		RH.hideSplash(domain);
-		window.location = campusUrl;
-	})
-	jQuery('#frontpage-content footer').click(function() {
-		RH.hideSplash('www');
-		return false;
-	});
 });
